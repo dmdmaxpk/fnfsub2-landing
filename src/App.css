@@ -1,0 +1,575 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main_landing_page {
+    /* display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; */
+}
+
+.landing_page_background {
+  background-image: url("./assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  text-align: center;
+  padding-top: 3%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  /* display: flex; */
+  /* align-items: center; */
+}
+.affiliateLandingBg{
+  background-image: url("./assets/affBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  text-align: center;
+  padding-top: 3%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  /* display: flex; */
+  /* align-items: center; */
+}
+.eventLandingBg{
+  background-image: url("./assets/eventBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  text-align: center;
+  padding-top: 5%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  /* display: flex; */
+  /* align-items: center; */
+}
+.zeroMB{
+  margin: 0 !important;
+}
+.aText1a{
+  margin-top: 0;
+}
+.full_page_height {
+  overflow-y: hidden;
+  height: 100%;
+}
+.agLogo{
+  width: 200px;
+}
+.channelLogosImg{
+  width: 6.5%;
+  margin-right: 1%;
+}
+.lastChannelImage{
+  margin-top: 2vh;
+}
+.lightFont{
+  font-weight: 600;
+}
+.aText2{
+  font-size: smaller;
+}
+.aText3{
+  color: #bbf525;
+  font-size: xx-large;
+  margin-bottom: 5px;
+}
+.affiliateSubBtn{
+  background-image: linear-gradient(to right, #2691d5, #9ee132);
+  color: white;
+  font-size: x-large;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 60px;
+  margin: 5vh 0;
+  cursor: pointer;
+  padding-left: 2vw;
+  /* width: 25%; */
+  height: 8vh;
+}
+.telenorBtnLogo{
+  float: right;
+  width: 10%;
+  margin: 0 2vw;
+}
+.afSubBtn{
+  background: transparent;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 25%;
+  height: 65px;
+}
+.afSubBtnImg{
+  width: 100%;
+  margin-bottom: 5%;
+}
+.confirmText{
+  margin-bottom: 0;
+}
+  .btnDoubleConsent{
+    margin-top: 10px;
+    padding: 1%;
+    color: white;
+    border: none;
+    background-size: cover;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    /* width: 50px; */
+  }
+  .btnYes{
+    background-color: #8ec318;
+    margin-right: 5px;
+  }
+  .btnNo{
+    background-color: rgb(186, 46, 46);
+  }
+  .chargesBox{
+    padding: 1% 2% 1% 2%;
+    border: 1px solid #cccccc5c;
+    width: 25%;
+    position: relative;
+    left: 35%;
+    white-space: pre-line;
+    /* bottom: 0; */
+  }
+  .cbText1{}
+  .chargePP{
+    color: #319fe7;
+  }
+  .cbText2{
+    font-size: small;
+  }
+  .cancelText{
+    font-weight: 100;
+  }
+  .DCBox{
+    /* height: 50px; */
+  }
+
+.goonj_logo{
+  width: 150px;
+  margin: 5%;
+}
+.pslSubPage{
+  background-image: url("./assets/pslDesktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+.btnSubmitPsl{
+  opacity: 0%;
+  position: relative;
+  margin-top: 26%;
+  left: 38%;
+  width: 25%;
+  height: 90px;
+  cursor: pointer;
+}
+.consentBox{
+  text-align: center;
+  background-color: white;
+  height: 17vh;
+  width: 18vw;
+  position: relative;
+  left: 41%;
+  margin-top: 23%;
+  border-radius: 8px;
+  padding: 2% 0 0 0;
+}
+.pslYes{
+  width: 4vw;
+}
+.goonjPslPage{
+  background-image: url("./assets/pslBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+.goonjLivePage{
+  /* background-image: url("./assets/web-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+.eventTextDiv{
+  position: relative;
+  top: 10%;
+}
+.eventBtnDiv{
+  position: relative;
+  top: 12%;
+  margin-bottom: 2%;
+}
+.pkgDesc{
+  color: #aeeb1a;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+  margin-bottom: -2vh;
+}
+.eventConsentTextDiv{
+  position: relative;
+  top: 8%;
+  background-color: rgba(0, 0, 0, 0.313);
+  box-shadow: 0px 0px 25px 25px rgba(0, 0, 0, 0.313);
+}
+.eventConsentText1{
+  text-transform: none;
+  font-weight: normal;
+}
+.flagsDiv{
+  position: relative;
+  left: 20%;
+  width: 50%;
+  margin-top: 3%;
+  padding: 2vh 5vw;
+  background-color: rgba(0, 0, 0, 0.313);
+  box-shadow: 0px 0px 25px 25px rgba(0, 0, 0, 0.313);
+}
+.flagsImg{
+  width: 20vw;
+}
+@media only screen and (max-width: 1600px) {
+  .popup{
+    width: 30%;
+    /* padding: 2%; */
+  }
+  .popup_text_1{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
+  }
+  .btnSubmitPsl{
+    position: relative;
+    margin-top: 31%;
+    left: 37%;
+    width: 26%;
+    height: 90px;
+    cursor: pointer;
+  }
+  .chargesBox{
+    width: 30%;
+    left: 33%;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .popup{
+    width: 35%;
+    /* padding: 2%; */
+  }
+  .popup_text_1{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .popup{
+    width: 50%;
+    /* padding: 2%; */
+  }
+  .popup_text_1{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
+  }
+  .consentBox{
+    text-align: center;
+    background-color: white;
+    height: 13vh;
+    width: 40vw;
+    position: relative;
+    left: 30%;
+    margin-top: 62%;
+    border-radius: 8px;
+    padding: 3% 0 0 0;
+  }
+  .pslYes{
+    width: 12vw;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .consentBox{
+    text-align: center;
+    background-color: white;
+    height: 18vh;
+    width: 40vw;
+    position: relative;
+    left: 30%;
+    margin-top: 40%;
+    border-radius: 8px;
+    padding: 3% 0 0 0;
+  }
+  .pslYes{
+    width: 12vw;
+  }
+  .btnSubmitPsl{
+    position: relative;
+    margin-top: 44%;
+    left: 30%;
+    width: 40%;
+    height: 90px;
+    cursor: pointer;
+  }
+  .chargesBox{
+    width: 45%;
+    left: 26%;
+  }
+}
+@media only screen and (max-width: 768px) {
+.popup{
+  width: 60%;
+}
+.popup_text_1{
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: x-large;
+}
+.btnSubmitPsl{
+  position: relative;
+  margin-top: 59%;
+  left: 26%;
+  width: 50%;
+  height: 90px;
+  cursor: pointer;
+}
+.consentBox{
+  text-align: center;
+  background-color: white;
+  height: 17vh;
+  width: 40vw;
+  position: relative;
+  left: 30%;
+  margin-top: 60%;
+  border-radius: 8px;
+  padding: 2% 0 0 0;
+}
+.pslYes{
+  width: 12vw;
+}
+.aText1sm{
+  font-size: x-large;
+}
+.chargesBox{
+  width: 45%;
+  left: 26%;
+}
+}
+@media only screen and (max-width: 550px) {
+  .popup{
+    width: 90%;
+  }
+  .popup_text_1{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: x-large;
+  }
+  .consentBox{
+    text-align: center;
+    background-color: white;
+    height: 17vh;
+    width: 40vw;
+    position: relative;
+    left: 30%;
+    margin-top: 108%;
+    border-radius: 8px;
+    padding: 2% 0 0 0;
+  }
+  .pslYes{
+    width: 12vw;
+  }
+  .aText1sm{
+    font-size: large;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .pslSubPage{
+    background-image: url("./assets/pslMobile.png");
+    background-position: unset;
+  }
+  .goonjLivePage{
+    /* background-image: url("./assets/mobilebg.png"); */
+  }
+  .btnSubmitPsl{
+    position: relative;
+    margin-top: 118%;
+    left: 15%;
+    width: 70%;
+    height: 90px;
+    cursor: pointer;
+  }
+  .agLogo{
+    display: none;
+  }
+  .aText1{
+    font-size: x-large;
+  }
+  .channelLogosImg{
+    width: 22%;
+    margin-right: 4%;
+  }
+  .lastChannelImage{
+    display: none;
+  }
+  .aText3{
+    font-size: x-large;
+  }
+  .chargesBox{
+    width: 90%;
+    left: 2.5%;
+  }
+  .afSubBtn{
+    width: 80%;
+  }
+  .afSubBtnImg{
+    /* width: 65%; */
+  }
+  .btnDoubleConsent{
+    padding: 2%;
+  }
+  .affiliateLandingBg{
+    padding-top: 10vh !important;
+  }
+  .aText1sm{
+    font-size: large;
+  }
+  .affiliateSubBtn{
+    width: 90%;
+    /* font-size: large; */
+  }
+  .telenorBtnLogo{
+    width: 8vw;
+    margin-right: 5vw;
+  }
+  .eventLandingBg{
+    padding: 5vh 2vw;
+  }
+  .flagsImg{
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .pslSubPage{
+    background-image: url("./assets/pslMobile.png");
+    background-position: unset;
+  }
+  .btnSubmitPsl{
+    position: relative;
+    margin-top: 127%;
+    left: 15%;
+    width: 80%;
+    height: 90px;
+    cursor: pointer;
+  }
+  .aText1sm{
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .popup{
+    width: 90%;
+  }
+  .popup_text_1{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: larger;
+  }
+  .popup_text_2{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: small;
+  }
+  .popup_text_3{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: x-small;
+  }
+  .btnSubmitPsl{
+    position: relative;
+    margin-top: 115%;
+    left: 15%;
+    width: 75%;
+    height: 90px;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .aText3 {
+    font-size: large;
+  }
+  .afSubBtn{
+    margin-top: 5px;
+  }
+  .cbText1{
+    font-size: smaller;
+  }
+  .cbText2 {
+    font-size: x-small;
+  }
+}
