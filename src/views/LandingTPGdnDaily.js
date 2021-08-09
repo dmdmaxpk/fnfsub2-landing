@@ -50,9 +50,9 @@ export default class LandingTPGdnDaily extends React.Component {
         <div className="full_page_height">
             <div className="eventLandingBg">
               <div className="eventTextDiv">
-                <h1 className = "aText1 zeroMB aText1sm">SAFAR ME HO YA HO TV SE DOOR, KABHI BHI</h1>
-                <h1 className = "aText1 aText1a aText1sm zeroMB">KAHEN BHI DEKHO EXCITING CRICKET MATCHES</h1>
-                <h1 className = "aText1 aText1a aText1sm zeroMB"><font color="#9ee132">GOONJ</font> MOBILE TV PER!</h1>
+                <h2 className = "aText1 zeroMB aText1sm"><font color="#9ee132">GOONJ</font> per dekho SRG Kashmir Premier league Ky tamam matches</h2>
+                <h2 className = "aText1 aText1a aText1sm zeroMB">Live aur apnay cricket passion</h2>
+                <h2 className = "aText1 aText1a aText1sm zeroMB">ko karo fulfill!</h2>
               </div>
 
               <div className="eventBtnDiv">
@@ -71,9 +71,6 @@ export default class LandingTPGdnDaily extends React.Component {
                   <p className="cbText2">
                     <font className="cancelText">CANCEL ANYTIME FROM </font>Profile{">"}Subscriptions
                   </p>
-                  <div className="flagsDiv">
-                    <img className="flagsImg" src={require('../assets/flags.png')} />
-                  </div>
                 </div>
               :''}
             </div>

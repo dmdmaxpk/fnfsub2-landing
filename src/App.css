@@ -260,6 +260,8 @@ body, html {
 .eventTextDiv{
   position: relative;
   top: 10%;
+
+  padding-top: 40vh;
 }
 .eventBtnDiv{
   position: relative;
@@ -501,7 +503,11 @@ body, html {
   }
   .affiliateSubBtn{
     width: 90%;
+    margin: 1vw 0 10vw 0 !important;
     /* font-size: large; */
+  }
+  .eventConsentText1{
+    font-size: small;
   }
   .telenorBtnLogo{
     width: 8vw;
@@ -512,6 +518,12 @@ body, html {
   }
   .flagsImg{
     width: 50vw;
+  }
+  .eventTextDiv{
+    padding-top: 45vh !important;
+  }
+  .pkgDesc{
+    margin: 0 !important;
   }
 }
 @media only screen and (max-width: 380px) {
