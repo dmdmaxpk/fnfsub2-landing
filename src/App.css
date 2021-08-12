@@ -93,6 +93,21 @@ body, html {
   /* display: flex; */
   /* align-items: center; */
 }
+.kplBg{
+  background-image: url("./assets/kplDesktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  text-align: center;
+  padding-top: 5%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  /* display: flex; */
+  /* align-items: center; */
+}
 .zeroMB{
   margin: 0 !important;
 }
@@ -261,7 +276,7 @@ body, html {
   position: relative;
   top: 10%;
 
-  padding-top: 40vh;
+  /* padding-top: 40vh; */
 }
 .eventBtnDiv{
   position: relative;
@@ -297,6 +312,15 @@ body, html {
 .flagsImg{
   width: 20vw;
 }
+.kplInfoDiv{
+  position: absolute;
+  bottom: 0;
+  left: 35vw;
+}
+.kplSubBtn{
+  margin: 2vh 0 !important;
+  height: 6vh !important;
+}
 @media only screen and (max-width: 1600px) {
   .popup{
     width: 30%;
@@ -318,6 +342,15 @@ body, html {
   .chargesBox{
     width: 30%;
     left: 33%;
+  }
+  .kplInfoDiv{
+    position: absolute;
+    bottom: 0;
+    left: 30vw;
+  }
+  .kplSubBtn{
+    margin: 0 !important;
+    height: 6vh !important;
   }
 }
 @media only screen and (max-width: 1350px) {
@@ -516,14 +549,24 @@ body, html {
   .eventLandingBg{
     padding: 5vh 2vw;
   }
+  .kplBg{
+    background-image: url('./assets/kplMovile.png');
+    background-size: cover;
+  }
   .flagsImg{
     width: 50vw;
   }
   .eventTextDiv{
-    padding-top: 45vh !important;
+    /* padding-top: 45vh !important; */
   }
   .pkgDesc{
     margin: 0 !important;
+  }
+  .kplInfoDiv{
+    left: 0;
+  }
+  .kplSubBtn{
+    margin: 1vw 0 0 0 !important;
   }
 }
 @media only screen and (max-width: 380px) {

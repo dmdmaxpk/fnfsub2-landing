@@ -123,7 +123,7 @@ class Popup extends React.Component {
           {this.state.doubleConsent === false ?
             this.state.btnDisable === false ?
               this.state.loading === false ?
-              <button className="affiliateSubBtn" onClick={this.handleSubmit}>
+              <button className={`affiliateSubBtn ${this.props.className}`} onClick={this.handleSubmit}>
                 Subscribe Now 
                 <img className="telenorBtnLogo" src={require("../../assets/t-logo.png")} />
               </button>

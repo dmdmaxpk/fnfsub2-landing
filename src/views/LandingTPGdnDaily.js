@@ -48,31 +48,32 @@ export default class LandingTPGdnDaily extends React.Component {
     return (
       src !== 'tp-fb2021' ?
         <div className="full_page_height">
-            <div className="eventLandingBg">
-              <div className="eventTextDiv">
+            <div className="kplBg">
+              {/* <div className="eventTextDiv">
                 <h2 className = "aText1 zeroMB aText1sm"><font color="#9ee132">GOONJ</font> per dekho SRG Kashmir Premier league Ky tamam matches</h2>
                 <h2 className = "aText1 aText1a aText1sm zeroMB">Live aur apnay cricket passion</h2>
                 <h2 className = "aText1 aText1a aText1sm zeroMB">ko karo fulfill!</h2>
-              </div>
+              </div> */}
 
-              <div className="eventBtnDiv">
-                <p className="pkgDesc">{this.state.pkgDesc}</p>
-                {this.state.packageId ? 
-                  <Popup packageId={pkg ? this.state.packageId : 'QDfC'} msisdn={msisdn} src={src} mid={mid} tid={unique_transaction_id} />
-                :
-                  ''
-                }
-              </div>
-              {this.state.enableControls === true ?
-                <div className="eventConsentTextDiv lightFont">
-                  <p className="eventConsentText1 zeroMB">
-                    I agree to recurring charges deduction from my mobile balance until Unsubscription
-                  </p>
-                  <p className="cbText2">
-                    <font className="cancelText">CANCEL ANYTIME FROM </font>Profile{">"}Subscriptions
-                  </p>
+              <div className="kplInfoDiv">
+                <div className="eventBtnDiv">
+                  {this.state.packageId ? 
+                    <Popup className="kplSubBtn" packageId={pkg ? this.state.packageId : 'QDfC'} msisdn={msisdn} src={src} mid={mid} tid={unique_transaction_id} />
+                  :
+                    ''
+                  }
                 </div>
-              :''}
+                {this.state.enableControls === true ?
+                  <div className="eventConsentTextDiv lightFont">
+                    <p className="eventConsentText1 zeroMB">
+                      I agree to recurring charges deduction from my mobile balance until Unsubscription
+                    </p>
+                    <p className="cbText2">
+                      <font className="cancelText">CANCEL ANYTIME FROM </font>Profile{">"}Subscriptions
+                    </p>
+                  </div>
+                :''}
+              </div>
             </div>
         </div>
         :
