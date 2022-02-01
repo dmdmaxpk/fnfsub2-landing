@@ -7,6 +7,7 @@ import {PageView, initGA} from './components/Tracking';
 import LandingDaily from './views/LandingDaily';
 import LandingTPGdn from './views/LandingTPGdn';
 import LandingTPGdnDaily from './views/LandingTPGdnDaily';
+import CreateLog from './views/CreateLog';
 
 class App extends React.Component{
 
@@ -33,6 +34,7 @@ render(){
         <Route exact path="/gdnThree" component={LandingDaily} ></Route>
         <Route exact path="/tp-gdn" component={LandingTPGdn} ></Route>
         <Route exact path="/tp-gdn-daily" component={LandingTPGdnDaily} ></Route>
+        <Route exact path="/redirect" component={CreateLog} />
       </div>
     </BrowserRouter>
   );

@@ -78,6 +78,9 @@ body, html {
   /* display: flex; */
   /* align-items: center; */
 }
+.gdnThreeLandingBg{
+  background-image: url("./assets/gdnThreeBg.jpg") !important;
+}
 .eventLandingBg{
   background-image: url("./assets/eventBg.png");
   background-size: cover;
