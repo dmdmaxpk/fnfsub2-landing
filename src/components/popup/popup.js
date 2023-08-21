@@ -55,8 +55,10 @@ class Popup extends React.Component {
   }
   subscribe(){
     this.setState({loading: true});
+
     const userData = {
       msisdn: this.props.msisdn,
+      serviceId: this.props.serviceId,
       package_id: this.state.packageId,
       source: (this.props.src !== null && this.props.src !== "null" && this.props.src !== undefined && this.props.src !== "") ? this.props.src : "HE",
       marketing_source: this.props.mid,
@@ -65,6 +67,25 @@ class Popup extends React.Component {
       payment_source: 'telenor'
 
     }
+    console.log(userData);
+    /*
+        // generate cms link
+        let payload = {msisdn: this.userData.msisdn, serviceId: this.userData.serviceId};
+        console.log('Payload', payload);
+
+        PaywallInstance.post('/payment/cms-token', payload)
+        .then(res => {
+            console.log('CMS token generated: ', res.data);
+            console.log('CMS token: ', res.data.response.token);
+
+            let token = res.data.response.token;
+            window.location.href = `https://apis.telenor.com.pk/cms/v1/redirect?token=${token}`;
+        }).catch(err => {
+            console.error(err);
+        })
+
+
+    /*
     // console.log('user', userData);
     PaywallInstance.post(`${config.base_url}/payment/subscribe`, userData)
     .then(res =>{
@@ -97,7 +118,7 @@ class Popup extends React.Component {
       this.setState({loading: false});
       console.log(err);
       alert("Something went wrong! :(");
-    })
+    })*/
   }
   cancel(){
     Event("Count", "Click", "Cancel");

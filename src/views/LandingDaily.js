@@ -11,6 +11,7 @@ export default class LandingDaily extends React.Component {
     this.state = {
         showPopup: true,
         packageId: 'QDfC',
+        serviceId: '99144',
         packageDesc: ''
     };
   }
