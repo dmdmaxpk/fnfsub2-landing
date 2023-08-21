@@ -68,21 +68,22 @@ class Popup extends React.Component {
 
     }
     console.log(userData);
-    /*
-        // generate cms link
-        let payload = {msisdn: this.userData.msisdn, serviceId: this.userData.serviceId};
-        console.log('Payload', payload);
+    
+    // generate cms link
+    let payload = {msisdn: userData.msisdn, serviceId: userData.serviceId};
+    console.log('Payload', payload);
 
-        PaywallInstance.post('/payment/cms-token', payload)
-        .then(res => {
-            console.log('CMS token generated: ', res.data);
-            console.log('CMS token: ', res.data.response.token);
+    PaywallInstance.post(`${config.base_url}/payment/campaigns`, userData);
+    PaywallInstance.post('/payment/cms-token', payload)
+    .then(res => {
+        console.log('CMS token generated: ', res.data);
+        console.log('CMS token: ', res.data.response.token);
 
-            let token = res.data.response.token;
-            window.location.href = `https://apis.telenor.com.pk/cms/v1/redirect?token=${token}`;
-        }).catch(err => {
-            console.error(err);
-        })
+        let token = res.data.response.token;
+        window.location.href = `https://apis.telenor.com.pk/cms/v1/redirect?token=${token}`;
+    }).catch(err => {
+        console.error(err);
+    })
 
 
     /*
