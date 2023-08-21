@@ -66,7 +66,7 @@ export default class LandingDaily extends React.Component {
 
               {/* <p className = "aText3 lightFont">24hrs free trial for first time users</p> */}
             {
-                this.state.showPopup? <Popup packageId={this.state.packageId} msisdn={msisdn} src={src} mid={mid} tid={unique_transaction_id} />: null
+                this.state.showPopup? <Popup serviceId={this.state.serviceId} packageId={this.state.packageId} msisdn={msisdn} src={src} mid={mid} tid={unique_transaction_id} />: null
             }
               <div className="chargesBox lightFont">
                 <p className="cbText1">
