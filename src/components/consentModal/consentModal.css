@@ -1,0 +1,110 @@
+.advert{
+    width: 320px;
+    height: 50px;
+    background-color: yellow;
+    border: 1px solid pink;
+    border-radius: 5px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 16px;
+    font-weight: bold; 
+    color: #3331;
+    text-align: center;
+    justify-items: center;
+    margin:0 auto;
+}
+
+
+.consent-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    background-image: linear-gradient(to right, #C6C4D9, #D4BCD4, #C6C4D9) !important; 
+    /* border: 2px solid blueviolet; */
+    box-shadow:24px;
+    padding: 16px;
+    border-radius: 10px;
+    /* height: 80%; */
+}
+
+.consent-box h1{
+    font-size: x-large !important;
+    margin-bottom: 2vh;
+    color:#F92A53 ;
+    margin-top: 30px;
+    font-size: 20px;
+
+}
+.consent-box h2{
+    margin-top: 60px;
+    font-size: small !important;
+}
+
+.consent-box h3{
+    margin-top: 5vh;
+    font-size: small !important;
+}
+
+.consent-box p{
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+.consent-box button{
+    font-size: 15px;
+    padding:8px 16px;
+    margin-right: 8px;
+    cursor:pointer;
+    background-color: rgb(161, 98, 133);
+}
+
+.consent-box button:last-child{
+    margin-right: 0;
+}
+
+.subscription-button {
+    background-color: yellow !important;
+    color: red !important;
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+.subscription-button:hover {
+    background-color: yellow !important;
+}
+.consent-box .confirm-button {
+    background-image: linear-gradient(to right, #b7127b, #e02a75, #f43f69) !important; 
+    color:white; /* Change text color on hover  */
+    border-radius: 14px;
+    border: none;
+}
+.cancel-button {
+    color: white; /* Change the color to whatever you desire */
+    text-decoration: underline; /* Underline the text */
+    cursor: pointer; /* Set cursor to pointer to indicate it's clickable */
+    background-color: transparent !important;
+    border:"none" !important;
+    box-shadow: none !important;
+    padding: none !important;
+    outline: none !important;
+}
+.marginBottom1vh {
+    margin-bottom: 1vh;
+}
+.marginBottom2vh {
+    margin-bottom: 2vh;
+}
+.marginBottom5vh {
+    margin-bottom: 5vh;
+}
+.snackbarContainer > .MuiPaper-root {
+    background-color: #3497EB !important;
+}

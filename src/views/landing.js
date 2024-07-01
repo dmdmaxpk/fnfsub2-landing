@@ -2,6 +2,10 @@ import React from 'react';
 import Popup from "../components/popup/popup";
 import AxiosInstance from '../config/AxiosInstance';
 import { config } from '../config/config';
+import consentModal from "../components/consentModal/consentModal";
+import ConsentButton from '../components/consentModal/consentModal';
+import PaywallInstance from '../config/PaywallInstance';
+
 
 var queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -18,28 +22,52 @@ export default class  Landing extends React.Component {
         showPopup: true,
         packageId: 'QDfG', // revert this
         serviceId: '99146',
-        packageDesc: ''
+        packageDesc: '',
+        open: false,
+        consentBoxDetails: undefined
     };
+  }
+
+  fetchTokenAndModal = async (msisdn, serviceId) => {
+    // generate cms link
+    let payload = {msisdn, serviceId};
+    console.log('Payload', payload);
+
+    PaywallInstance.post('/payment/v2/cms-token', payload)
+    .then(res => {
+        const result = res.data;
+        console.log('cms token v2 result', result);
+        this.setState({consentBoxDetails: result.response, open: true});
+    }).catch(err => {
+        console.error('error', err);
+    })
   }
   
   componentDidMount(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
+    const msisdn = urlParams.get('msisdn');
     
     // Get Package ID
     AxiosInstance.get(`/package?source=${src}`)
     .then(res =>{
       let packageData = res.data[1]; // revert this
-      console.log("packageID", packageData._id);
+      console.log("packageID", packageData);
       this.setState({
         packageId: packageData._id,
         packageDesc: packageData.package_desc
       })
+      this.fetchTokenAndModal(msisdn, packageData.pid);
     })
+    .catch(error => {
+      console.log('error', error)
+    });
+
   }
   routerLogic(){
       console.log("Press the router Logic button");
   }
+
   render() {
     return (
         <div className="full_page_height">
@@ -64,9 +92,9 @@ export default class  Landing extends React.Component {
               {/* <p className = "aText2 lightFont">and much more</p> */}
 
               {/* <p className = "aText3 lightFont">24hrs free trial for first time users</p> */}
-            {
+            {/* {
                 this.state.showPopup? <Popup serviceId={this.state.serviceId} packageId={this.state.packageId} msisdn={msisdn} src={src} mid={mid} tid={unique_transaction_id} />: null
-            }
+            } */}
               <div className="chargesBox lightFont">
                 <p className="cbText1">
                   <font className="chargePP">{this.state.packageDesc}</font> Charges will be deducted from mobile balance 
@@ -77,6 +105,8 @@ export default class  Landing extends React.Component {
                 </p>
               </div>
             </div>
+
+            <ConsentButton open={this.state.open} onClose={()=> this.setState({open: false})} data={this.state.consentBoxDetails} msisdn={msisdn} serviceId={this.state.serviceId} />
         </div>
     );
   }

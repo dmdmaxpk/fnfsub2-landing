@@ -141,31 +141,32 @@ class Popup extends React.Component {
 
   render() {
     return (
-        <div>
-          {this.state.doubleConsent === false ?
-            this.state.btnDisable === false ?
-              this.state.loading === false ?
-              <button className="affiliateSubBtn" onClick={this.handleSubmit}>
-                Subscribe Now 
-                <img className="telenorBtnLogo" src={require("../../assets/t-logo.png")} />
-              </button>
-              :
-                <Loader
-                  type="Rings"
-                  color="#00BFFF"
-                  height={100}
-                  width={100}
-                />
-              :
-              ''
-          :
-            <div className = "DCBox">
-              <p className="confirmText">Confirm?</p>
-              <button className="btnDoubleConsent btnYes" onClick={this.subscribe}>Yes</button>
-              <button className="btnDoubleConsent btnNo" onClick={this.cancel}>No</button>
-            </div>
-          }
-        </div>
+        <></>
+        // <div>
+        //   {this.state.doubleConsent === false ?
+        //     this.state.btnDisable === false ?
+        //       this.state.loading === false ?
+        //       <button className="affiliateSubBtn" onClick={this.handleSubmit}>
+        //         Subscribe Now 
+        //         <img className="telenorBtnLogo" src={require("../../assets/t-logo.png")} />
+        //       </button>
+        //       :
+        //         <Loader
+        //           type="Rings"
+        //           color="#00BFFF"
+        //           height={100}
+        //           width={100}
+        //         />
+        //       :
+        //       ''
+        //   :
+        //     <div className = "DCBox">
+        //       <p className="confirmText">Confirm?</p>
+        //       <button className="btnDoubleConsent btnYes" onClick={this.subscribe}>Yes</button>
+        //       <button className="btnDoubleConsent btnNo" onClick={this.cancel}>No</button>
+        //     </div>
+        //   }
+        // </div>
     );
   }
 }

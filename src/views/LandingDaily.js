@@ -2,6 +2,8 @@ import React from 'react';
 import Popup from "../components/popup/popup";
 import AxiosInstance from '../config/AxiosInstance';
 import { config } from '../config/config';
+import PaywallInstance from '../config/PaywallInstance';
+import ConsentButton from '../components/consentModal/consentModal';
 
 export default class LandingDaily extends React.Component {
 
@@ -12,12 +14,31 @@ export default class LandingDaily extends React.Component {
         showPopup: true,
         packageId: 'QDfC',
         serviceId: '99144',
-        packageDesc: ''
+        packageDesc: '',
+        open: false,
+        consentBoxDetails: undefined
     };
   }
+
+  fetchTokenAndModal = async (msisdn, serviceId) => {
+    // generate cms link
+    let payload = {msisdn, serviceId};
+    console.log('Payload', payload);
+
+    PaywallInstance.post('/payment/v2/cms-token', payload)
+    .then(res => {
+        const result = res.data;
+        console.log('cms token v2 result', result);
+        this.setState({consentBoxDetails: result.response, open: true});
+    }).catch(err => {
+        console.error('error', err);
+    })
+  }
+
   componentDidMount(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
+    const msisdn = urlParams.get('msisdn');
     const src = urlParams.get('src') === 'null' ? 'HE' : urlParams.get('src');
     // Get Package ID
     AxiosInstance.get(`/package?source=${src ? src : 'HE'}`)
@@ -28,6 +49,7 @@ export default class LandingDaily extends React.Component {
         packageId: packageData._id,
         packageDesc: packageData.package_desc
       })
+      this.fetchTokenAndModal(msisdn, packageData.pid);
     })
   }
 
@@ -66,7 +88,7 @@ export default class LandingDaily extends React.Component {
 
               {/* <p className = "aText3 lightFont">24hrs free trial for first time users</p> */}
             {
-                this.state.showPopup? <Popup serviceId={this.state.serviceId} packageId={this.state.packageId} msisdn={msisdn} src={src} mid={mid} tid={unique_transaction_id} />: null
+                this.state.showPopup ? <Popup serviceId={this.state.serviceId} packageId={this.state.packageId} msisdn={msisdn} src={src} mid={mid} tid={unique_transaction_id} />: null
             }
               <div className="chargesBox lightFont">
                 <p className="cbText1">
@@ -77,6 +99,8 @@ export default class LandingDaily extends React.Component {
                 </p>
               </div>
             </div>
+
+            <ConsentButton open={this.state.open} onClose={()=> this.setState({open: false})} data={this.state.consentBoxDetails} msisdn={msisdn} serviceId={this.state.serviceId} />
         </div>
     );
   }
